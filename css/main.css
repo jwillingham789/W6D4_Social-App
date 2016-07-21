@@ -1,3 +1,34 @@
+.timeline_body {
+  background-color: #50e3c2;
+}
+
 .chirpSignInimg {
   width: 300px;
+}
+
+.textShadow {
+  text-shadow: 1px 1px 1px black;
+}
+
+.profileText {
+  color: white;
+}
+
+.nav_links {
+  margin-top: 20px;
+}
+
+.nav_links a {
+  text-decoration: none;
+  color: white;
+  padding-left: 10px;
+  text-shadow: 1px 1px 1px black;
+}
+
+.thumbnail {
+  margin-top: 20px;
+}
+
+.thumbnail h3 {
+  margin: 0;
 }

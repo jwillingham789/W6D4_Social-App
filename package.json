@@ -1,7 +1,7 @@
 {
-  "name": "router-app",
+  "name": "chirp-app",
   "version": "1.0.0",
-  "description": "router-app",
+  "description": "chirp-app",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server"

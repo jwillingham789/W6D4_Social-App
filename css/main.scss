@@ -1,3 +1,28 @@
+$textShadow: 1px 1px 1px black;
+.timeline_body {
+  background-color: #50e3c2;
+}
 .chirpSignInimg {
   width: 300px;
+}
+.textShadow {
+  text-shadow: $textShadow;
+}
+.profileText {
+  color: white;
+}
+.nav_links {
+  margin-top: 20px;
+  a {
+    text-decoration: none;
+    color: white;
+    padding-left: 10px;
+    text-shadow: $textShadow;
+  }
+}
+.thumbnail {
+  margin-top: 20px;
+  h3 {
+    margin: 0;
+  }
 }
