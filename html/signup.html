@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Chirp Sign Up</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="Sign Up">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/main.css" />
+
+
+  </head>
+  <body>
+    <div class="container">
+      <class class="row">
+        <div class="col-sm-12">
+          <h3 class="text-center">Fill In The Form To Sign Up</h1>
+          <hr />
+          <img class='chirpSignInimg center-block' src="../images/chirp.png" alt="">
+          <form method="post" action="/save" enctype="multipart/form-data">
+
+            <div class="form-group">
+              <label for="name" class="nameSignUp">Username</label>
+              <input type="name" class="form-control" id="name" name="name" required />
+            </div>
+
+            <div class="form-group">
+              <label for="email" class="emailSignUp">Email</label>
+              <input type="email" class="form-control" id="emailSignUp" name="email" required />
+            </div>
+
+            <div class="form-group">
+              <label for="password" class="passwordSignUp">Password</label>
+              <input type="password" class="form-control" id="passwordSignUp" name="password" required />
+            </div>
+
+            <div class="form-group">
+              <label for="passwordConfirm" class="passwordConfirmSignUp">Confirm Password</label>
+              <input type="passwordConfirm" class="form-control" id="passwordConfirmSignUp" name="passwordConfirm" required />
+            </div>
+
+            <button type="button" class="btn btn-success">Sign Up</button>
+          </form>
+        </div>
+      </class>
+    </div>
+
+  <script src="main.bundle.js"></script>
+  <script src="main.js"></script>
+  </body>
+</html>
