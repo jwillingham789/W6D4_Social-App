@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="./css/main.css" />
 
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
@@ -16,11 +16,15 @@
     <div class="container">
       <class class="row">
         <div class="col-sm-12">
-          <h3 class="text-center">Fill In The Form To Sign Up</h1>
+          <div class="head1">
+            <h1 class="text-center">Fill In The Form To Sign Up</h1>
+            <h5 class="text-center">Please fill in all fields before clicking sign up</h5>
+          </div>
           <hr />
-          <img class='chirpSignInimg center-block' src="../images/chirp.png" alt="">
+          <br />
+          <img class='chirpSignInimg center-block' src="./images/chirp.png" alt="">
           <form method="post" action="/save" enctype="multipart/form-data">
-
+          <br />
             <div class="form-group">
               <label for="name" class="nameSignUp">Username</label>
               <input type="name" class="form-control" id="name" name="name" required />
@@ -40,8 +44,11 @@
               <label for="passwordConfirm" class="passwordConfirmSignUp">Confirm Password</label>
               <input type="passwordConfirm" class="form-control" id="passwordConfirmSignUp" name="passwordConfirm" required />
             </div>
+            <div class="col-sm-12 text-center">
 
-            <button type="button" class="btn btn-success">Sign Up</button>
+                <button type="button" class="btn2 btn-success">Sign Up</button>
+
+            </div>
           </form>
         </div>
       </class>

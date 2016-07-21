@@ -11,6 +11,11 @@ h1{
 .head1 > h1 {
   text-shadow: 2.5px 2.5px rgba(215, 215, 215, 0.8);
 }
+.head1 > h3 {
+  font-weight: bolder;
+  font-size: 2.5em;
+  text-shadow: 2.5px 2.5px rgba(215, 215, 215, 0.8);
+}
 .head1 > h5 {
   color: rgb(159, 158, 158);
   font-weight:normal;
@@ -36,11 +41,30 @@ label {
   border-color: black;
   text-decoration: none;
 }
+button{
+  border: transparent;
+}
 .btn > a{
   text-decoration: none;
   color: white;
 }
 .btn:hover > a{
+  background-color: black;
+  border-color: black;
+  text-decoration: none;
+  color: white;
+}
+.btn2 {
+  background-color: #50e3c2;
+  border-color: #50e3c2;
+  padding: 20px 84px;
+  border-radius: 10px;
+  margin-top: .50em;
+  font-size: 20px;
+  text-shadow: 1px 1px rgba(215, 215, 215, 0.7);
+  width:60%;
+}
+.btn2:hover {
   background-color: black;
   border-color: black;
   text-decoration: none;
