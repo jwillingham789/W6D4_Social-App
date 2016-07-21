@@ -7,33 +7,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous" />
-    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="./css/main.css" />
 
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
   </head>
   <body>
   <div class="container">
     <class class="row">
       <div class="col-sm-12">
-        <h1 class="text-center">Welcome to Chirp!</h1>
-        <h5 class="text-center">Please sign in or sign up below</h5>
+        <div class="head1">
+          <h1 class="text-center">Welcome to Chirp!</h1>
+          <h5 class="text-center">Please sign in or sign up below</h5>
+        </div>
         <hr />
-        <img class='chirpSignInimg center-block' src="../images/chirp.png" alt="">
+        <br />
+        <div class="chirpImg">
+          <img class='chirpSignInimg center-block' src="./images/chirp.png" alt="">
+        </div>
+        <br />
         <form method="post" action="/save" enctype="multipart/form-data">
 
           <div class="form-group">
             <label for="email" class="emailSignin">Email</label>
             <input type="email" class="form-control" id="emailSignIn" name="email" required />
           </div>
-
+          <br />
           <div class="form-group">
             <label for="password" class="passwordSignin">Password</label>
             <input type="password" class="form-control" id="passwordSignIn" name="password" required />
           </div>
-
-          <button type="button" class="btn btn-success">Sign In</button>
-          <button type="button" class="btn btn-success"><a href="file:///Users/JakeWillingham/Documents/TheIronYard/Week6/Day4/chirp/html/signup.html" >Sign Up</a></button>
         </form>
+          <div class="col-sm-12 text-center">
+            <button type="button" class="btn btn-success">Sign In</button>
+            <button type="button" class="btn btn-success"><a href="file:///Users/JakeWillingham/Documents/TheIronYard/Week6/Day4/chirp/signup.html" >Sign Up</a></button>
+          </div>
       </div>
     </class>
   </div>
