@@ -8,12 +8,12 @@ document.getElementById('btnSignUp').addEventListener('click', function () {
 
   fetchApi('POST','/signup', formFields, function (response, statusCode) {
     if (statusCode === 201 || statusCode === 200) {
-      saveToken(response.token)
+      saveToken(response.api_token)
       redirect('/timeline.html')
     }
     else {
-      redirect('/signup.html')
       alert(response)
+      redirect('/signup.html')
     }
   })
 })
