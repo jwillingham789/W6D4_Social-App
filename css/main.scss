@@ -138,7 +138,6 @@ button{
 	color: $black;
 	text-shadow: 10px 0 $black, -10px 0 $black;
 }
-
 .nav_links a:hover,
 .nav_links a:focus, {
 	color: $black;
@@ -159,6 +158,7 @@ button{
 .timelineBottomBanner {
   background-color: $white;
   box-shadow: $boxShadow;
+  height: 84px;
 }
 .chirpSignInimg {
   width: 375px;
@@ -220,12 +220,14 @@ button{
   width: 100%;
   height: 5.5vw;
 }
-
 .modal-footer{
   text-align: center;
   margin-bottom: .5em;
 }
-
 .thumbnail{
   padding: 12px;
+}
+.thumbnail2{
+  padding: 12px;
+  height: 100vw;
 }
