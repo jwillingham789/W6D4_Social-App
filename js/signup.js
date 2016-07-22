@@ -1,4 +1,4 @@
-document.getElementById('btnSubmit').addEventListener('click', function () {
+document.getElementById('btnSignUp').addEventListener('click', function () {
   var formFields = {
     username: document.getElementById('name').value,
     email: document.getElementById('emailSignUp').value,
@@ -12,7 +12,9 @@ document.getElementById('btnSubmit').addEventListener('click', function () {
       redirect('/timeline.html')
     }
     else {
-      // popup a warning
+      redirect('/signup.html')
+      // var error = response.join('')
+      alert(response)
     }
   })
 })
