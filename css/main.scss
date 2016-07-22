@@ -102,7 +102,6 @@ button{
   text-decoration: none;
 }
 
-
 //navigation bar
 .navBanner {
   background-color: $white;
@@ -120,7 +119,6 @@ button{
 	font-size: 14px;
   padding-left: 0px;
 }
-
 .nav_links a::before {
 	position: absolute;
 	top: 80%;
@@ -132,7 +130,6 @@ button{
 	transition: text-shadow 0.3s, color 0.3s;
 	transform: translateX(-50%);
 }
-
 .nav_links a:hover::before,
 .nav_links a:focus::before {
 	color: $black;
