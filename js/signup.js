@@ -6,14 +6,13 @@ document.getElementById('btnSignUp').addEventListener('click', function () {
     avatar: document.getElementById('avatarSignUp').value
   }
 
-  fetchApi('/signup', formFields, function (response, statusCode) {
-    if (statusCode === 201) {
+  fetchApi('POST','/signup', formFields, function (response, statusCode) {
+    if (statusCode === 201 || statusCode === 200) {
       saveToken(response.token)
       redirect('/timeline.html')
     }
     else {
       redirect('/signup.html')
-      // var error = response.join('')
       alert(response)
     }
   })

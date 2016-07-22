@@ -4,7 +4,7 @@ document.getElementById('btnSignIn').addEventListener('click', function () {
     password: document.getElementById('passwordSignIn').value
   }
 
-  fetchApi('/login', formFields, function (response, statusCode) {
+  fetchApi('POST', '/login', formFields, function (response, statusCode) {
     if (statusCode === 201 || statusCode === 200) {
       saveToken(response.token)
       redirect('/timeline.html')

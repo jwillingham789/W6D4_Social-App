@@ -1,28 +1,42 @@
 // API Host
 // var api = 'https://calm-beach-80027.herokuapp.com/'
 var api = 'http://491f03f5.ngrok.io'
-var token = sessionStorage.getItem('token')
+var tokenId = 'token'
+var token = sessionStorage.getItem(tokenId)
 
 // Utilities
 // endpoint ... /users
 // formFields ... {name: 'Joe'}
-function fetchApi(endpoint, formFields, callback) {
-  var statusCode
+function fetchApi(method, endpoint, formFields, callback) {
+  var statusCode,
+      payload
+
+  if (method === undefined) {
+    method = 'POST'
+  }
 
   if (formFields === undefined || formFields === null || formFields === '') {
     formFields = {}
   }
-  formFields.token = token
 
-  fetch(api + endpoint, {
-    method: 'POST',
+  payload = {
+    method: method,
     headers: {
       'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(formFields)
-  })
+    }
+  }
+
+  if (method.toUpperCase() === 'POST') {
+    formFields[tokenId] = token
+	  payload.body = JSON.stringify(formFields)
+  }
+  else {
+    endpoint += '?' + tokenId + '=' + encodeUriComponent(token)
+  }
+
+  fetch(api + endpoint, payload)
     .then(function(response) {
-      statusCode = response.status
+	     statusCode = response.status
       return response.json()
     })
     .then(function(data) {
@@ -31,11 +45,11 @@ function fetchApi(endpoint, formFields, callback) {
 }
 
 function saveToken(token) {
-  sessionStorage.setItem('token', token)
+  sessionStorage.setItem(tokenId, token)
 }
 
 function destroyToken() {
-  sessionStorage.removeItem('token')
+  sessionStorage.removeItem(tokenId)
 }
 
 function redirect(url) {
