@@ -7,19 +7,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="./css/main.css" />
 
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
   </head>
   <body>
     <div class="container">
       <class class="row">
         <div class="col-sm-12">
-          <h3 class="text-center">Fill In The Form To Sign Up</h1>
+          <div class="head1">
+            <h1 class="text-center">Fill In The Form To Sign Up</h1>
+            <h5 class="text-center">Please fill in all fields before clicking sign up</h5>
+          </div>
           <hr />
-          <img class='chirpSignInimg center-block' src="../images/chirp.png" alt="">
-          <form method="post" action="https://calm-beach-80027.herokuapp.com/signup" enctype="multipart/form-data">
-
+          <br />
+          <img class='chirpSignInimg center-block' src="./images/chirp.png" alt="">
+          <form method="post" action="#" enctype="multipart/form-data">
+          <br />
             <div class="form-group">
               <label for="name" class="nameSignUp">Username</label>
               <input type="name" class="form-control" id="name" name="name" required />
@@ -35,13 +40,23 @@
               <input type="password" class="form-control" id="passwordSignUp" name="password" required />
             </div>
 
-            <button type="submit" class="btn btn-success" id="btnSignUp">Sign Up</button>
+            <div class="form-group">
+              <label for="avatarSignUp" class="avatarSignUp">Upload Image Url</label>
+              <input type="avatarSignUp" class="form-control" id="avatarSignUp" name="avatar" required />
+            </div>
+
+            <div class="col-sm-12 text-center">
+
+                <button type="button" id="btnSubmit" class="btn btn-success">Sign Up</button>
+
+            </div>
           </form>
         </div>
       </class>
     </div>
 
   <script src="main.bundle.js"></script>
-  <script src="../js/main.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/signup.js"></script>
   </body>
 </html>

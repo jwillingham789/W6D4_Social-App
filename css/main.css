@@ -1,34 +1,129 @@
-.timeline_body {
-  background-color: #50e3c2;
-}
-
-.chirpSignInimg {
-  width: 300px;
-}
-
-.textShadow {
-  text-shadow: 1px 1px 1px black;
-}
-
-.profileText {
-  color: white;
-}
-
-.nav_links {
-  margin-top: 20px;
+@charset "UTF-8";
+.navBanner {
+  background-color: white;
+  box-shadow: 2px 3px 5px #444444;
+  z-index: 1;
 }
 
 .nav_links a {
+  position: relative;
+  display: inline-block;
+  margin: 20px 50px 20px 50px;
+  color: #50e3c2;
   text-decoration: none;
-  color: white;
-  padding-left: 10px;
-  text-shadow: 1px 1px 1px black;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 14px;
+  padding-left: 0px;
 }
 
-.thumbnail {
-  margin-top: 20px;
+.nav_links a::before {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  color: transparent;
+  content: '•';
+  text-shadow: 0 0 transparent;
+  font-size: 10px;
+  transition: text-shadow 0.3s, color 0.3s;
+  transform: translateX(-50%);
 }
 
-.thumbnail h3 {
+.nav_links a:hover::before,
+.nav_links a:focus::before {
+  color: black;
+  text-shadow: 10px 0 black, -10px 0 black;
+}
+
+.nav_links a:hover,
+.nav_links a:focus {
+  color: black;
+  text-decoration: none;
+}
+
+.timelineBody {
+  background-color: #F5F8FA;
+}
+
+.timelineBanner {
+  background-image: url(../images/ChirpBanner.svg);
+  background-size: cover;
+  background-position: right;
+  background-repeat: space;
+  z-index: 0;
+  height: 200px;
+}
+
+.timelineBottomBanner {
+  background-color: white;
+  box-shadow: 0px 0px 12px #444444;
+}
+
+.chirpSignInimg {
+  width: 250px;
+}
+
+.textShadow {
+  text-shadow: 1px 1px 1px #444444;
+}
+
+.profileText {
+  color: #50e3c2;
+}
+
+.leftsideThumbnail {
+  box-shadow: 2px 3px 5px #444444;
+  padding: 10px;
+}
+
+.followerNumbers {
+  display: inline-block;
+  margin-left: 26%;
+  padding: 5px 0 5px 0;
+  margin-bottom: 0;
+}
+
+.followerNumbers li {
+  list-style: none;
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.columnLeft {
+  margin-top: 10px;
+}
+
+.columnRight {
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+.columnRight .thumbnail {
+  box-shadow: 2px 3px 5px #444444;
+}
+
+.columnRight .thumbnail img {
+  width: 20px;
+}
+
+.columnRight h3 {
   margin: 0;
+}
+
+.profileImgBox {
+  position: relative;
+  top: -140px;
+  left: 0px;
+  z-index: 1;
+}
+
+.profileImg {
+  border-radius: 20px;
+  border: 5px solid white;
+  box-shadow: 2px 3px 5px #444444;
+}
+
+#messageArea {
+  width: 100%;
+  height: 100%;
 }
