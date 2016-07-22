@@ -84,11 +84,28 @@ button{
 .head {
   margin-top: 4px;
 }
+//let out a chirp button
+.btn3 {
+ background-color: $chirpGreen;
+ border-color: $chirpGreen;
+ padding: 20px 84px;
+ border-radius: 10px;
+ font-size: 20px;
+ text-shadow: 1px 1px $gray2;
+ margin-top: 2.5px;
+ margin-bottom: 3.5px;
+ margin-left: 4px;
+}
+.btn3:hover{
+  background-color: $black;
+  border-color: $black;
+  text-decoration: none;
+}
 
 
 //navigation bar
 .navBanner {
-  background-color: white;
+  background-color: $white;
   box-shadow: $boxShadow;
   z-index: 1;
 }
@@ -118,13 +135,13 @@ button{
 
 .nav_links a:hover::before,
 .nav_links a:focus::before {
-	color: black;
-	text-shadow: 10px 0 black, -10px 0 black;
+	color: $black;
+	text-shadow: 10px 0 $black, -10px 0 $black;
 }
 
 .nav_links a:hover,
 .nav_links a:focus, {
-	color: black;
+	color: $black;
   text-decoration: none;
 }
 
@@ -140,8 +157,8 @@ button{
   height: 200px;
 }
 .timelineBottomBanner {
-  background-color: white;
-  box-shadow: 0px 0px 12px #444444;
+  background-color: $white;
+  box-shadow: $boxShadow;
 }
 .chirpSignInimg {
   width: 375px;
@@ -166,13 +183,15 @@ button{
     list-style: none;
     display: inline-block;
     margin-right: 20px;
+    font-size: 18px
   }
 }
 .columnLeft {
-  margin-top: 10px;
+  margin-top: 20px;
+  margin-left: 10px;
 }
 .columnRight {
-  margin-top: 10px;
+  margin-top: 20px;
   border-radius: 5px;
   .thumbnail {
     box-shadow: $boxShadow;
@@ -182,6 +201,8 @@ button{
   }
   h3 {
     margin: 0;
+    padding-top: 4px;
+    text-shadow: 2.5px 2.5px $gray2;
   }
 }
 .profileImgBox {
@@ -192,10 +213,19 @@ button{
 }
 .profileImg {
   border-radius: 20px;
-  border: 5px solid white;
+  border: 5px solid $white;
   box-shadow: $boxShadow;
 }
 #messageArea {
   width: 100%;
-  height: 100%;
+  height: 5.5vw;
+}
+
+.modal-footer{
+  text-align: center;
+  margin-bottom: .5em;
+}
+
+.thumbnail{
+  padding: 12px;
 }
