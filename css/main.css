@@ -1,59 +1,71 @@
 * {
   font-family: 'Roboto', sans-serif;
 }
+
 .chirpSignInimg {
   width: 375px;
 }
-h1{
+
+h1 {
   font-weight: bolder;
   font-size: 3.5em;
 }
+
 .head1 > h1 {
   text-shadow: 2.5px 2.5px rgba(215, 215, 215, 0.8);
 }
+
 .head1 > h3 {
   font-weight: bolder;
   font-size: 2.5em;
   text-shadow: 2.5px 2.5px rgba(215, 215, 215, 0.8);
 }
+
 .head1 > h5 {
-  color: rgb(159, 158, 158);
-  font-weight:normal;
+  color: #9f9f9f;
+  font-weight: normal;
 }
+
 label {
   margin-bottom: 10px;
   font-weight: normal;
   font-size: 1.5em;
 }
+
 .btn {
- background-color: #50e3c2;
- border-color: #50e3c2;
- padding: 20px 84px;
- border-radius: 10px;
- margin-left: 10px;
- margin-right: 10px;
- margin-top: .50em;
- font-size: 20px;
- text-shadow: 1px 1px rgba(215, 215, 215, 0.7);
+  background-color: #50e3c2;
+  border-color: #50e3c2;
+  padding: 20px 84px;
+  border-radius: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: .50em;
+  font-size: 20px;
+  text-shadow: 1px 1px rgba(215, 215, 215, 0.8);
 }
-.btn:hover{
-  background-color: black;
-  border-color: black;
+
+.btn:hover {
+  background-color: #000000;
+  border-color: #000000;
   text-decoration: none;
 }
-button{
+
+button {
   border: transparent;
 }
-.btn > a{
+
+.btn > a {
   text-decoration: none;
-  color: white;
+  color: #ffffff;
 }
-.btn:hover > a{
-  background-color: black;
-  border-color: black;
+
+.btn:hover > a {
+  background-color: #000000;
+  border-color: #000000;
   text-decoration: none;
-  color: white;
+  color: #ffffff;
 }
+
 .btn2 {
   background-color: #50e3c2;
   border-color: #50e3c2;
@@ -61,15 +73,17 @@ button{
   border-radius: 10px;
   margin-top: .50em;
   font-size: 20px;
-  text-shadow: 1px 1px rgba(215, 215, 215, 0.7);
-  width:60%;
+  text-shadow: 1px 1px rgba(215, 215, 215, 0.8);
+  width: 60%;
 }
+
 .btn2:hover {
-  background-color: black;
-  border-color: black;
+  background-color: #000000;
+  border-color: #000000;
   text-decoration: none;
-  color: white;
+  color: #ffffff;
 }
-.head{
+
+.head {
   margin-top: 4px;
 }
