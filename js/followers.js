@@ -24,7 +24,8 @@ fetchApi('GET','/timeline', {}, function (response, statusCode) {
       username.classList.add('text-center')
       var unfollowButton = document.createElement('button')
       unfollowButton.classList.add('btn')
-      unfollowButton.classList.add('center-block')
+      unfollowButton.classList.add(result.username)
+      unfollowButton.classList.add('unfollow')
       unfollowButton.innerHTML = 'Unfollow'
       unfollowButton.setAttribute('type', 'button')
 
@@ -41,4 +42,27 @@ fetchApi('GET','/timeline', {}, function (response, statusCode) {
   $(function(){
     createMarquee()
   })
+
+  document.body.addEventListener('click', function (e){
+    if (e.target.classList.contains('unfollow')) {
+      fetchApi('POST','/unfollow', {}, function (response, statusCode) {
+        if (statusCode >= 200 && statusCode < 300) {
+          redirect('/followers.html')
+        }
+        else {
+          alert("something went wrong")
+        }
+      })
+    }
+    // sessionStorage.removeItem('api_token')
+    // redirect('/index.html')
+  })
+
+})
+
+
+//signout
+document.getElementById('signout').addEventListener('click', function (){
+  sessionStorage.removeItem('api_token')
+  redirect('/index.html')
 })

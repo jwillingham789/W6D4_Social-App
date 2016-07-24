@@ -198,7 +198,7 @@
 .followerContainer {
   display: flex;
   flex-direction: column;
-  margin-right: 5px;
+  margin-right: 20px;
 }
 
 .followerContainer .followerImgContainer {
