@@ -7,7 +7,7 @@ document.getElementById('btnSignUp').addEventListener('click', function () {
   }
 
   fetchApi('POST','/signup', formFields, function (response, statusCode) {
-    if (statusCode === 201 || statusCode === 200) {
+    if (statusCode >= 200 && statusCode < 300) {
       saveToken(response.api_token)
       redirect('/timeline.html')
     }

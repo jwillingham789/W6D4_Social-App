@@ -1,6 +1,6 @@
 // API Host
-// var api = 'https://calm-beach-80027.herokuapp.com/'
-var api = 'http://491f03f5.ngrok.io'
+var api = 'https://calm-beach-80027.herokuapp.com'
+// var api = 'http://491f03f5.ngrok.io'
 var tokenId = 'api_token'
 var token = sessionStorage.getItem(tokenId)
 

@@ -1,233 +1,285 @@
-$textShadow: 1px 1px 1px rgb(68, 68, 68);
 $grayBack: #F5F8FA;
 $chirpGreen: #50e3c2;
-$boxShadow: 2px 3px 5px #444444;
-$gray1: #9f9f9f;
+$gray1: #7e7b7b;
+$boxShadow: 2px 3px 15px #9f9f9f;
 $gray2: rgba(#d7d7d7, 0.8);
-$white: #ffffff;
-$black: #000000;
+$textShadow: 1.5px 1.5px $gray1;
+$metallic_gradient: linear-gradient(10deg, black, gray 50%, silver);
+
 
 * {
-  font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 //SignIn Page
-.head1 > h1 {
-    text-shadow: 2.5px 2.5px $gray2;
-    font-weight: bolder;
-    font-size: 3.5em;
+.signInBackground {
+  background-image: url("../images/earth.jpg");
+  background-size: cover;
+  background-position: center;
 }
-.head1 > h3 {
-  font-weight: bolder;
-  font-size: 2.5em;
-  text-shadow: 2.5px 2.5px $gray2;
+.form-group {
+  label {
+    color: white;
+  }
 }
-.head1 > h5 {
-  color: $gray1;
-  font-weight:normal;
+.head1 {
+    h1 {
+      color: white;
+      text-shadow: $textShadow;
+      font-weight: bolder;
+      font-size: 3.5em;
+    }
+    h3 {
+        font-weight: bolder;
+        font-size: 2.5em;
+        text-shadow: $textShadow;
+    }
+    h5 {
+        color: $gray2;
+        font-weight: normal;
+    }
 }
 
 //form fields
 .form-group {
     label {
-      margin-bottom: 10px;
-      font-weight: normal;
-      font-size: 1.5em;
-  }
+        margin-bottom: 10px;
+        font-weight: normal;
+        font-size: 1.5em;
+    }
 }
-
 .btn {
- background-color: $chirpGreen;
- border-color: $chirpGreen;
- padding: 20px 84px;
- border-radius: 10px;
- margin-left: 10px;
- margin-right: 10px;
- margin-top: .50em;
- font-size: 20px;
- text-shadow: 1px 1px $gray2;
+    background-color: $chirpGreen;
+    border-color: $chirpGreen;
+    padding: 20px 84px;
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 0.50em;
+    font-size: 20px;
+    text-shadow: 1px 1px $gray2;
 }
-.btn:hover{
-  background-color: $black;
-  border-color: $black;
-  text-decoration: none;
+.btn:hover {
+    background-color: black;
+    border-color: black;
+    text-decoration: none;
 }
-button{
-  border: transparent;
+button {
+    border: transparent;
 }
-
-.btn > a{
-  text-decoration: none;
-  color: $white;
+.btn > a {
+    text-decoration: none;
+    color: white;
 }
-.btn:hover > a{
-  background-color: $black;
-  border-color: $black;
-  text-decoration: none;
-  color: $white;
+.btn:hover > a {
+    background-color: black;
+    border-color: black;
+    text-decoration: none;
+    color: white;
 }
 .btn2 {
-  background-color: $chirpGreen;
-  border-color: $chirpGreen;
-  padding: 20px 84px;
-  border-radius: 10px;
-  margin-top: .50em;
-  font-size: 20px;
-  text-shadow: 1px 1px $gray2;
-  width:60%;
+    background-color: $chirpGreen;
+    border-color: $chirpGreen;
+    padding: 20px 84px;
+    border-radius: 10px;
+    margin-top: 0.50em;
+    font-size: 20px;
+    text-shadow: 1px 1px $gray2;
+    width: 60%;
 }
 .btn2:hover {
-  background-color: $black;
-  border-color: $black;
-  text-decoration: none;
-  color: $white;
+    background-color: black;
+    border-color: black;
+    text-decoration: none;
+    color: white;
 }
 .head {
-  margin-top: 4px;
+    margin-top: 4px;
 }
 //let out a chirp button
 .btn3 {
- background-color: $chirpGreen;
- border-color: $chirpGreen;
- padding: 20px 84px;
- border-radius: 10px;
- font-size: 20px;
- text-shadow: 1px 1px $gray2;
- margin-top: 2.5px;
- margin-bottom: 3.5px;
- margin-left: 4px;
+    background-color: $chirpGreen;
+    border-color: $chirpGreen;
+    padding: 20px 84px;
+    border-radius: 10px;
+    font-size: 20px;
+    text-shadow: 1px 1px $gray2;
+    margin-top: 2.5px;
+    margin-bottom: 3.5px;
+    margin-left: 4px;
 }
-.btn3:hover{
-  background-color: $black;
-  border-color: $black;
-  text-decoration: none;
+.btn3:hover {
+    background-color: black;
+    border-color: black;
+    text-decoration: none;
 }
-
-
 //navigation bar
 .navBanner {
-  background-color: $white;
-  box-shadow: $boxShadow;
-  z-index: 1;
+    box-shadow: $boxShadow;
+    z-index: 1;
+    background: $metallic_gradient;
 }
 .nav_links a {
-	position: relative;
-	display: inline-block;
-	margin: 20px 50px 20px 50px;
-	color: $chirpGreen;
-	text-decoration: none;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-	font-size: 14px;
-  padding-left: 0px;
+    position: relative;
+    display: inline-block;
+    margin: 20px 50px;
+    color: $chirpGreen;
+    text-shadow: $textShadow;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 18px;
+    padding-left: 0;
 }
-
 .nav_links a::before {
-	position: absolute;
-	top: 80%;
-	left: 50%;
-	color: transparent;
-	content: '•';
-	text-shadow: 0 0 transparent;
-	font-size: 10px;
-	transition: text-shadow 0.3s, color 0.3s;
-	transform: translateX(-50%);
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    color: transparent;
+    content: '•';
+    text-shadow: 0 0 transparent;
+    font-size: 10px;
+    transition: text-shadow 0.3s, color 0.3s;
+    transform: translateX(-50%);
 }
-
-.nav_links a:hover::before,
-.nav_links a:focus::before {
-	color: $black;
-	text-shadow: 10px 0 $black, -10px 0 $black;
+.nav_links a:focus::before,
+.nav_links a:hover::before {
+    color: white;
+    text-shadow: 10px 0 white, -10px 0 white;
 }
-.nav_links a:hover,
-.nav_links a:focus, {
-	color: $black;
-  text-decoration: none;
+,
+.nav_links a:focus,
+.nav_links a:hover {
+    color: black;
+    text-decoration: none;
 }
-
 .timelineBody {
-  background-color: $grayBack;
+    background-image: url("../images/space1.jpg");
+    background-size: contain;
+    background-position: center;
 }
 .timelineBanner {
-  background-image: url(../images/ChirpBanner.svg);
-  background-size: cover;
-  background-position: right;
-  background-repeat:space;
-  z-index: 0;
-  height: 200px;
+    background-image: url("../images/space2.jpg");
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+    height: 150px;
 }
 .timelineBottomBanner {
-  background-color: $white;
-  box-shadow: $boxShadow;
-  height: 84px;
+    background-color: white;
+    box-shadow: $boxShadow;
+    height: 84px;
 }
 .chirpSignInimg {
-  width: 375px;
+    width: 375px;
 }
 .textShadow {
-  text-shadow: $textShadow;
+    text-shadow: $textShadow;
 }
 .profileText {
-  color: $chirpGreen;
+    color: white;
 }
-.leftsideThumbnail {
-  box-shadow: $boxShadow;
-  padding: 10px;
+.followerNumbers {
+    // display: inline-block;
+    padding: 5px 0;
+    margin-bottom: 0;
+    li {
+        list-style: none;
+        display: inline-block;
+        margin-right: 20px;
+        font-size: 18px;
+        color: $chirpGreen;
+        text-shadow: $textShadow;
+    }
 }
 
-.followerNumbers {
-  display: inline-block;
-  margin-left: 26%;
-  padding: 5px 0 5px 0;
-  margin-bottom: 0;
-  li {
-    list-style: none;
-    display: inline-block;
-    margin-right: 20px;
-    font-size: 18px
-  }
-}
 .columnLeft {
-  margin-top: 20px;
-  margin-left: 10px;
+    margin-top: 20px;
+    margin-left: 10px;
+    .thumbnail {
+        box-shadow: $boxShadow;
+        background: $metallic_gradient;
+        border: none;
+        p {
+          color: white;
+        }
+    }
 }
 .columnRight {
-  margin-top: 20px;
-  border-radius: 5px;
-  .thumbnail {
-    box-shadow: $boxShadow;
-    img {
-      width: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    .thumbnail {
+        box-shadow: 2px 3px 15px #9f9f9f;
+        display: flex;
+        background: $metallic_gradient;
+        border: none;
     }
-  }
-  h3 {
-    margin: 0;
-    padding-top: 4px;
-    text-shadow: 2.5px 2.5px $gray2;
-  }
 }
-.profileImgBox {
-  position: relative;
-  top: -140px;
-  left: 0px;
-  z-index: 1;
+//Post inside of thumbnail
+.leftContainer {
+  flex: 1;
+    img {
+        width: 100%;
+        height: 100%;
+    }
 }
+.rightContainer {
+  flex: 6;
+  padding-left: 5px;
+    .nameIconContainer {
+        display: flex;
+        flex: 1;
+        .nameContainer {
+            flex: 6;
+            color: white;
+            h3 {
+                margin: 0;
+                padding-top: 4px;
+                text-shadow: $textShadow;
+            }
+        }
+        .iconContainer {
+            flex: 1;
+            .chirpIcon {
+                width: 20px;
+                float: right;
+            }
+            .chirpIcon:hover {
+
+            }
+        }
+    }
+    .bodyContainer {
+      flex: 3;
+      color: white;
+    }
+}
+
+
+// .profileImgBox {
+//     position: relative;
+//     top: -140px;
+//     left: 0;
+//     z-index: 1;
+// }
 .profileImg {
-  border-radius: 20px;
-  border: 5px solid $white;
-  box-shadow: $boxShadow;
+    border-radius: 20px;
+    border: 5px solid $chirpGreen;
+    box-shadow: $boxShadow;
+    width: 100%;
+    height: 100%;
 }
 #messageArea {
-  width: 100%;
-  height: 5.5vw;
+    width: 100%;
+    height: 5.5vw;
 }
-.modal-footer{
-  text-align: center;
-  margin-bottom: .5em;
+.modal-footer {
+    text-align: center;
+    margin-bottom: 0.5em;
 }
-.thumbnail{
-  padding: 12px;
+.thumbnail {
+    padding: 12px;
 }
-.thumbnail2{
-  padding: 12px;
-  height: 100vw;
+.thumbnail2 {
+    padding: 12px;
+    height: 100vw;
 }

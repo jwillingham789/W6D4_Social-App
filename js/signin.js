@@ -6,7 +6,7 @@ document.getElementById('btnSignIn').addEventListener('click', function () {
 
   fetchApi('POST', '/login', formFields, function (response, statusCode) {
     console.log(response)
-    if (statusCode === 201 || statusCode === 200) {
+    if (statusCode >= 200 && statusCode < 300) {
       saveToken(response.api_token)
       redirect('/timeline.html')
     }

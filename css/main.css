@@ -3,20 +3,31 @@
   font-family: 'Roboto', sans-serif;
 }
 
-.head1 > h1 {
-  text-shadow: 2.5px 2.5px rgba(215, 215, 215, 0.8);
+.signInBackground {
+  background-image: url("../images/earth.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.form-group label {
+  color: white;
+}
+
+.head1 h1 {
+  color: white;
+  text-shadow: 1.5px 1.5px #7e7b7b;
   font-weight: bolder;
   font-size: 3.5em;
 }
 
-.head1 > h3 {
+.head1 h3 {
   font-weight: bolder;
   font-size: 2.5em;
-  text-shadow: 2.5px 2.5px rgba(215, 215, 215, 0.8);
+  text-shadow: 1.5px 1.5px #7e7b7b;
 }
 
-.head1 > h5 {
-  color: #9f9f9f;
+.head1 h5 {
+  color: rgba(215, 215, 215, 0.8);
   font-weight: normal;
 }
 
@@ -33,14 +44,14 @@
   border-radius: 10px;
   margin-left: 10px;
   margin-right: 10px;
-  margin-top: .50em;
+  margin-top: 0.50em;
   font-size: 20px;
   text-shadow: 1px 1px rgba(215, 215, 215, 0.8);
 }
 
 .btn:hover {
-  background-color: #000000;
-  border-color: #000000;
+  background-color: black;
+  border-color: black;
   text-decoration: none;
 }
 
@@ -50,14 +61,14 @@ button {
 
 .btn > a {
   text-decoration: none;
-  color: #ffffff;
+  color: white;
 }
 
 .btn:hover > a {
-  background-color: #000000;
-  border-color: #000000;
+  background-color: black;
+  border-color: black;
   text-decoration: none;
-  color: #ffffff;
+  color: white;
 }
 
 .btn2 {
@@ -65,17 +76,17 @@ button {
   border-color: #50e3c2;
   padding: 20px 84px;
   border-radius: 10px;
-  margin-top: .50em;
+  margin-top: 0.50em;
   font-size: 20px;
   text-shadow: 1px 1px rgba(215, 215, 215, 0.8);
   width: 60%;
 }
 
 .btn2:hover {
-  background-color: #000000;
-  border-color: #000000;
+  background-color: black;
+  border-color: black;
   text-decoration: none;
-  color: #ffffff;
+  color: white;
 }
 
 .head {
@@ -95,27 +106,28 @@ button {
 }
 
 .btn3:hover {
-  background-color: #000000;
-  border-color: #000000;
+  background-color: black;
+  border-color: black;
   text-decoration: none;
 }
 
 .navBanner {
-  background-color: #ffffff;
-  box-shadow: 2px 3px 5px #444444;
+  box-shadow: 2px 3px 15px #9f9f9f;
   z-index: 1;
+  background: linear-gradient(10deg, black, gray 50%, silver);
 }
 
 .nav_links a {
   position: relative;
   display: inline-block;
-  margin: 20px 50px 20px 50px;
+  margin: 20px 50px;
   color: #50e3c2;
+  text-shadow: 1.5px 1.5px #7e7b7b;
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-size: 14px;
-  padding-left: 0px;
+  font-size: 18px;
+  padding-left: 0;
 }
 
 .nav_links a::before {
@@ -130,34 +142,36 @@ button {
   transform: translateX(-50%);
 }
 
-.nav_links a:hover::before,
-.nav_links a:focus::before {
-  color: #000000;
-  text-shadow: 10px 0 #000000, -10px 0 #000000;
+.nav_links a:focus::before,
+.nav_links a:hover::before {
+  color: white;
+  text-shadow: 10px 0 white, -10px 0 white;
 }
 
-.nav_links a:hover,
-.nav_links a:focus {
-  color: #000000;
+,
+.nav_links a:focus,
+.nav_links a:hover {
+  color: black;
   text-decoration: none;
 }
 
 .timelineBody {
-  background-color: #F5F8FA;
+  background-image: url("../images/space1.jpg");
+  background-size: contain;
+  background-position: center;
 }
 
 .timelineBanner {
-  background-image: url(../images/ChirpBanner.svg);
+  background-image: url("../images/space2.jpg");
   background-size: cover;
-  background-position: right;
-  background-repeat: space;
+  background-position: center;
   z-index: 0;
-  height: 200px;
+  height: 150px;
 }
 
 .timelineBottomBanner {
-  background-color: #ffffff;
-  box-shadow: 2px 3px 5px #444444;
+  background-color: white;
+  box-shadow: 2px 3px 15px #9f9f9f;
   height: 84px;
 }
 
@@ -166,22 +180,15 @@ button {
 }
 
 .textShadow {
-  text-shadow: 1px 1px 1px #444444;
+  text-shadow: 1.5px 1.5px #7e7b7b;
 }
 
 .profileText {
-  color: #50e3c2;
-}
-
-.leftsideThumbnail {
-  box-shadow: 2px 3px 5px #444444;
-  padding: 10px;
+  color: white;
 }
 
 .followerNumbers {
-  display: inline-block;
-  margin-left: 26%;
-  padding: 5px 0 5px 0;
+  padding: 5px 0;
   margin-bottom: 0;
 }
 
@@ -190,11 +197,23 @@ button {
   display: inline-block;
   margin-right: 20px;
   font-size: 18px;
+  color: #50e3c2;
+  text-shadow: 1.5px 1.5px #7e7b7b;
 }
 
 .columnLeft {
   margin-top: 20px;
   margin-left: 10px;
+}
+
+.columnLeft .thumbnail {
+  box-shadow: 2px 3px 15px #9f9f9f;
+  background: linear-gradient(10deg, black, gray 50%, silver);
+  border: none;
+}
+
+.columnLeft .thumbnail p {
+  color: white;
 }
 
 .columnRight {
@@ -203,30 +222,62 @@ button {
 }
 
 .columnRight .thumbnail {
-  box-shadow: 2px 3px 5px #444444;
+  box-shadow: 2px 3px 15px #9f9f9f;
+  display: flex;
+  background: linear-gradient(10deg, black, gray 50%, silver);
+  border: none;
 }
 
-.columnRight .thumbnail img {
-  width: 20px;
+.leftContainer {
+  flex: 1;
 }
 
-.columnRight h3 {
+.leftContainer img {
+  width: 100%;
+  height: 100%;
+}
+
+.rightContainer {
+  flex: 6;
+  padding-left: 5px;
+}
+
+.rightContainer .nameIconContainer {
+  display: flex;
+  flex: 1;
+}
+
+.rightContainer .nameIconContainer .nameContainer {
+  flex: 6;
+  color: white;
+}
+
+.rightContainer .nameIconContainer .nameContainer h3 {
   margin: 0;
   padding-top: 4px;
-  text-shadow: 2.5px 2.5px rgba(215, 215, 215, 0.8);
+  text-shadow: 1.5px 1.5px #7e7b7b;
 }
 
-.profileImgBox {
-  position: relative;
-  top: -140px;
-  left: 0px;
-  z-index: 1;
+.rightContainer .nameIconContainer .iconContainer {
+  flex: 1;
+}
+
+.rightContainer .nameIconContainer .iconContainer .chirpIcon {
+  width: 20px;
+  float: right;
+}
+
+.rightContainer .bodyContainer {
+  flex: 3;
+  color: white;
 }
 
 .profileImg {
   border-radius: 20px;
-  border: 5px solid #ffffff;
-  box-shadow: 2px 3px 5px #444444;
+  border: 5px solid #50e3c2;
+  box-shadow: 2px 3px 15px #9f9f9f;
+  width: 100%;
+  height: 100%;
 }
 
 #messageArea {
@@ -236,7 +287,7 @@ button {
 
 .modal-footer {
   text-align: center;
-  margin-bottom: .5em;
+  margin-bottom: 0.5em;
 }
 
 .thumbnail {
