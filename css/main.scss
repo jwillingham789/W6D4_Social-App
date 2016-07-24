@@ -1,14 +1,15 @@
-$grayBack: #F5F8FA;
-$chirpGreen: #50e3c2;
 $gray1: #7e7b7b;
 $boxShadow: 2px 3px 15px #9f9f9f;
 $gray2: rgba(#d7d7d7, 0.8);
 $textShadow: 1.5px 1.5px $gray1;
-$metallic_gradient: linear-gradient(10deg, black, gray 50%, silver);
+$metallic_gradient: linear-gradient(10deg, black, gray 50%, rgb(139, 139, 139));
+$metalGray: #A7A9AC;
+$metallicBack: -webkit-gradient(linear, left top, right top, color-stop(.34, rgba(230,237,241,.05)), color-stop(.67, rgba(230,237,241,0)));
+$metallicShimmer: -webkit-gradient(radial, 50% -50, 300, 50% 0, 0, from(rgba(230, 237, 241, 0)), to(rgba(230, 237, 241, 0.8)));
 
 
 * {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'TradeGothicLTStd-BdCn20','PT Sans Narrow', sans-serif;
 }
 //SignIn Page
 .signInBackground {
@@ -20,22 +21,17 @@ $metallic_gradient: linear-gradient(10deg, black, gray 50%, silver);
   label {
     color: white;
   }
+  input {
+    font-size: 20px;
+  }
 }
 .head1 {
-    h1 {
-      color: white;
-      text-shadow: $textShadow;
-      font-weight: bolder;
-      font-size: 3.5em;
-    }
-    h3 {
-        font-weight: bolder;
-        font-size: 2.5em;
-        text-shadow: $textShadow;
-    }
+  font-weight: bolder;
+  text-shadow: $textShadow;
+  color: white;
     h5 {
+        text-shadow: none;
         color: $gray2;
-        font-weight: normal;
     }
 }
 
@@ -47,157 +43,52 @@ $metallic_gradient: linear-gradient(10deg, black, gray 50%, silver);
         font-size: 1.5em;
     }
 }
-.btn {
-    background-color: $chirpGreen;
-    border-color: $chirpGreen;
-    padding: 20px 84px;
-    border-radius: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-top: 0.50em;
-    font-size: 20px;
-    text-shadow: 1px 1px $gray2;
+.signUpLink {
+  text-decoration: none;
+  color: white;
 }
-.btn:hover {
-    background-color: black;
-    border-color: black;
-    text-decoration: none;
-}
-button {
-    border: transparent;
-}
-.btn > a {
-    text-decoration: none;
-    color: white;
-}
-.btn:hover > a {
-    background-color: black;
-    border-color: black;
-    text-decoration: none;
-    color: white;
-}
-.btn2 {
-    background-color: $chirpGreen;
-    border-color: $chirpGreen;
-    padding: 20px 84px;
-    border-radius: 10px;
-    margin-top: 0.50em;
-    font-size: 20px;
-    text-shadow: 1px 1px $gray2;
-    width: 60%;
-}
-.btn2:hover {
-    background-color: black;
-    border-color: black;
-    text-decoration: none;
-    color: white;
-}
-.head {
-    margin-top: 4px;
-}
-//let out a chirp button
-.btn3 {
-    background-color: $chirpGreen;
-    border-color: $chirpGreen;
-    padding: 20px 84px;
-    border-radius: 10px;
-    font-size: 20px;
-    text-shadow: 1px 1px $gray2;
-    margin-top: 2.5px;
-    margin-bottom: 3.5px;
-    margin-left: 4px;
-}
-.btn3:hover {
-    background-color: black;
-    border-color: black;
-    text-decoration: none;
-}
+
 //navigation bar
 .navBanner {
-    box-shadow: $boxShadow;
-    z-index: 1;
-    background: $metallic_gradient;
+    background-color: #A7A9AC;
+    background-image: $metallicBack;
+    .shimmer {
+      background-image: $metallicShimmer;
+      padding-top: 10px;
+      padding-bottom: 15px;
+    }
 }
-.nav_links a {
-    position: relative;
-    display: inline-block;
-    margin: 20px 50px;
-    color: $chirpGreen;
-    text-shadow: $textShadow;
-    text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-size: 18px;
-    padding-left: 0;
-}
-.nav_links a::before {
-    position: absolute;
-    top: 80%;
-    left: 50%;
-    color: transparent;
-    content: '•';
-    text-shadow: 0 0 transparent;
-    font-size: 10px;
-    transition: text-shadow 0.3s, color 0.3s;
-    transform: translateX(-50%);
-}
-.nav_links a:focus::before,
-.nav_links a:hover::before {
-    color: white;
-    text-shadow: 10px 0 white, -10px 0 white;
-}
-,
-.nav_links a:focus,
-.nav_links a:hover {
-    color: black;
-    text-decoration: none;
-}
+
 .timelineBody {
     background-image: url("../images/space1.jpg");
     background-size: contain;
     background-position: center;
 }
-.timelineBanner {
-    background-image: url("../images/space2.jpg");
-    background-size: cover;
-    background-position: center;
-    z-index: 0;
-    height: 150px;
+.topPage {
+  margin-top: 30px;
 }
-.timelineBottomBanner {
-    background-color: white;
+.signInimg {
+    width:150px;
+    margin-top: 30px;
     box-shadow: $boxShadow;
-    height: 84px;
 }
-.chirpSignInimg {
-    width: 375px;
+.signPage {
+  margin-bottom: 50px;
 }
-.textShadow {
-    text-shadow: $textShadow;
+.scrolling {
+  height: 100px;
 }
 .profileText {
     color: white;
-}
-.followerNumbers {
-    // display: inline-block;
-    padding: 5px 0;
-    margin-bottom: 0;
-    li {
-        list-style: none;
-        display: inline-block;
-        margin-right: 20px;
-        font-size: 18px;
-        color: $chirpGreen;
-        text-shadow: $textShadow;
-    }
 }
 
 .columnLeft {
     margin-top: 20px;
     margin-left: 10px;
     .thumbnail {
+        background-color: #A7A9AC;
+        background-image: $metallicBack;
         box-shadow: $boxShadow;
-        background: $metallic_gradient;
         border: none;
         p {
           color: white;
@@ -210,8 +101,18 @@ button {
     .thumbnail {
         box-shadow: 2px 3px 15px #9f9f9f;
         display: flex;
-        background: $metallic_gradient;
+        background-color: #A7A9AC;
+        background-image: $metallicBack;
         border: none;
+        h3 {
+          font-size: 30px;
+        }
+        h5 {
+          font-size: 12px;
+        }
+        p {
+          font-size: 20px;
+        }
     }
 }
 //Post inside of thumbnail
@@ -239,12 +140,9 @@ button {
         }
         .iconContainer {
             flex: 1;
-            .chirpIcon {
+            .icon {
                 width: 20px;
                 float: right;
-            }
-            .chirpIcon:hover {
-
             }
         }
     }
@@ -263,23 +161,60 @@ button {
 // }
 .profileImg {
     border-radius: 20px;
-    border: 5px solid $chirpGreen;
+    border: 5px solid black;
     box-shadow: $boxShadow;
     width: 100%;
     height: 100%;
 }
+.modal-body {
+  height: 200px;
+}
 #messageArea {
     width: 100%;
-    height: 5.5vw;
+    height: 180px;
+    font-size: 20px;
 }
 .modal-footer {
     text-align: center;
-    margin-bottom: 0.5em;
+    margin-bottom: 5px;
+    button:hover {
+        background-color: black;
+        color: white;
+        transition: 0.3s;
+    }
 }
+
 .thumbnail {
     padding: 12px;
 }
-.thumbnail2 {
-    padding: 12px;
-    height: 100vw;
+
+
+//follower Page
+.followerContainer {
+  display: flex;
+  flex-direction: column;
+  margin-right: 5px;
+  .followerImgContainer {
+    flex: 3;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .followerNameContainer {
+    flex: 1;
+  }
+  .followerButtonContainer {
+    flex: 1;
+    margin: auto;
+    button {
+      border: 2px solid black;
+      background-color: white;
+    }
+    button:hover {
+        background-color: black;
+        color: white;
+        transition: 0.3s;
+    }
+  }
 }

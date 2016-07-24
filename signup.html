@@ -1,29 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Chirp Sign Up</title>
+    <title>Sign Up</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="Sign Up">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Cabin:400,700|PT+Sans+Narrow:400,700|Roboto:400,500,700" rel="stylesheet">
     <link rel="stylesheet" href="./css/main.css" />
-
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="./css/button.css" />
 
   </head>
   <body class="signInBackground">
     <div class="container">
-      <class class="row">
+      <div class="row">
         <div class="col-sm-12">
+          <img class='signInimg img-circle center-block' src="https://robohash.org/space?bgset=bg1" alt="">
           <div class="head1">
             <h1 class="text-center">Fill In The Form To Sign Up</h1>
             <h5 class="text-center">Please fill in all fields before clicking sign up</h5>
           </div>
-          <br />
-          <img class='chirpSignInimg center-block' src="./images/chirp.png" alt="">
+        </div>
+        <div class="col-sm-6 col-sm-offset-3">
           <form method="post" action="#" enctype="multipart/form-data">
-          <br />
             <div class="form-group">
               <label for="name" class="nameSignUp">Username</label>
               <input type="name" class="form-control" id="name" name="name" required />
@@ -43,15 +43,15 @@
               <label for="avatarSignUp" class="avatarSignUp">Upload Image Url</label>
               <input type="avatarSignUp" class="form-control" id="avatarSignUp" name="avatar" required />
             </div>
-
-            <div class="col-sm-12 text-center">
-
-                <button type="button" id="btnSignUp" class="btn btn-success">Sign Up</button>
-
+            <br />
+            <div class="col-sm-12 text-center signPage">
+              <a class="button signUpLink" id="btnSignUp">
+                <span>Sign Up</span>
+              </a>
             </div>
           </form>
         </div>
-      </class>
+      </div>
     </div>
 
   <script src="js/config.js"></script>

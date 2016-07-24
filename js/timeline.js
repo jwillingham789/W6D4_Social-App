@@ -1,7 +1,5 @@
 fetchApi('GET','/timeline', {}, function (response, statusCode) {
-  console.log(response);
   //updating profile info
-
   document.getElementById('profileAvatar').setAttribute('src', response.avatar)
   document.getElementById('profileUsername').innerHTML = response.username
   document.getElementById('followers').innerHTML = response.followers_count
@@ -16,6 +14,7 @@ fetchApi('GET','/timeline', {}, function (response, statusCode) {
       leftContainer.classList.add('leftContainer')
       var userImage = document.createElement('img')
       userImage.setAttribute('src', result.user.avatar)
+      userImage.classList.add('profileImg')
 
 
       //RIGHT CONTAINER
@@ -27,11 +26,6 @@ fetchApi('GET','/timeline', {}, function (response, statusCode) {
       nameContainer.classList.add('nameContainer')
       var username = document.createElement('h3')
       username.innerHTML = result.user.username
-      var iconContainer = document.createElement('div')
-      iconContainer.classList.add('iconContainer')
-      var img = document.createElement('img')
-      img.classList.add('chirpIcon')
-      img.setAttribute('src', 'images/ChirpIcon.svg')
 
       var bodyContainer = document.createElement('div')
       bodyContainer.classList.add('bodyContainer')
@@ -46,9 +40,7 @@ fetchApi('GET','/timeline', {}, function (response, statusCode) {
       //right container
       //nameIcon container
       nameContainer.appendChild(username)
-      iconContainer.appendChild(img)
       nameIconContainer.appendChild(nameContainer)
-      nameIconContainer.appendChild(iconContainer)
       bodyContainer.appendChild(createdText)
       bodyContainer.appendChild(bodyText)
       rightContainer.appendChild(nameIconContainer)
@@ -60,7 +52,12 @@ fetchApi('GET','/timeline', {}, function (response, statusCode) {
 
       document.getElementById('post').appendChild(finalPost)
   })
+  $(function(){
+    createMarquee()
+  })
 })
+
+
 
 //signout
 document.getElementById('signout').addEventListener('click', function (){
@@ -76,12 +73,10 @@ document.getElementById('messageSubmit').addEventListener('click', function (){
   }
   fetchApi('POST','/post', formFields, function (response, statusCode) {
     if (statusCode >= 200 && statusCode < 300) {
-      // saveToken(response.api_token)
-      // document.getElementById('messageArea').innerHTML = ''
+      redirect('/timeline.html')
     }
     else {
       alert("something went wrong")
-
     }
   })
 })

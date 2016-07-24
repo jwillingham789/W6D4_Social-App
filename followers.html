@@ -1,53 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Chirp Followers</title>
+    <title>Followers</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="Followers">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/marquee.css" />
+    <link href="https://fonts.googleapis.com/css?family=Cabin:400,700|PT+Sans+Narrow:400,700|Roboto:400,500,700" rel="stylesheet">
     <link rel="stylesheet" href="./css/main.css" />
-
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="./css/button.css" />
 
   </head>
-  <body>
     <body class="timelineBody">
         <div class="container-fluid">
             <div class="row">
               <div class="navBanner col-sm-12">
-                <nav class="nav_links text-center">
-                  <a href="/timeline.html">Timeline</a>
-                  <a href="#">Follows</a>
-                  <a href="#">Sign Out</a>
-                </nav>
+                <div class="shimmer text-center">
+                  <a class="button" href="/timeline.html">
+                    <span>Timeline</span>
+                  </a>
+                  <a class="button" href="/followers.html">
+                    <span>Following</span>
+                  </a>
+                  <a class="button signOut" href="#" id="signout">
+                    <span>Sign Out</span>
+                  </a>
+                </div>
               </div>
-              <div class="timelineBanner col-sm-12">
-
-              </div>
-              <div class="timelineBottomBanner col-sm-12">
+              <div class="col-sm-12 scrolling">
+                <div class="container">
+                  <div class="marquee">
+                    <ul class="marquee-content-items">
+                      <li>Following: <span id="following"></span></li>
+                      <li>Followers: <span id="followers"></span></li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="row">
-                <div class="columnLeft col-sm-3">
-                  <div class="thumbnail leftsideThumbnail">
-                    <div class="profileImgBox">
-                      <img class='profileImg center-block' src="https://robohash.org/set_set3/bgset_bg1/3.14159?size=200x200" alt="">
-                      <h4 class="text-center profileText">Welcome back Jake</h2>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\</p>
+                <div class="columnRight col-sm-10 col-sm-offset-2" id="followerPost">
+                  <div classs="followerContainer">
+                    <div class="followerImgContainer">
+
                     </div>
-                  </div>
-                </div>
-                <div class="columnRight col-sm-8">
-                  <div class="thumbnail thumbnail2" id="followerPost">
+                    <div class="followerNameContainer">
+
+                    </div>
+                    <div class="followerButtonContainer">
+
+                    </div>
                   </div>
                 </div>
             </div>
         </div>
 
 
-  <script src="main.bundle.js"></script>
-  <script src="main.js"></script>
+  <!-- <script src="main.bundle.js"></script> -->
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+  <script src="js/plug-ins/marquee.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/followers.js"></script>
   </body>
 </html>

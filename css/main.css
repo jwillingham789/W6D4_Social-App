@@ -1,6 +1,5 @@
-@charset "UTF-8";
 * {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'TradeGothicLTStd-BdCn20','PT Sans Narrow', sans-serif;
 }
 
 .signInBackground {
@@ -13,22 +12,19 @@
   color: white;
 }
 
-.head1 h1 {
-  color: white;
-  text-shadow: 1.5px 1.5px #7e7b7b;
-  font-weight: bolder;
-  font-size: 3.5em;
+.form-group input {
+  font-size: 20px;
 }
 
-.head1 h3 {
+.head1 {
   font-weight: bolder;
-  font-size: 2.5em;
   text-shadow: 1.5px 1.5px #7e7b7b;
+  color: white;
 }
 
 .head1 h5 {
+  text-shadow: none;
   color: rgba(215, 215, 215, 0.8);
-  font-weight: normal;
 }
 
 .form-group label {
@@ -37,122 +33,20 @@
   font-size: 1.5em;
 }
 
-.btn {
-  background-color: #50e3c2;
-  border-color: #50e3c2;
-  padding: 20px 84px;
-  border-radius: 10px;
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-top: 0.50em;
-  font-size: 20px;
-  text-shadow: 1px 1px rgba(215, 215, 215, 0.8);
-}
-
-.btn:hover {
-  background-color: black;
-  border-color: black;
-  text-decoration: none;
-}
-
-button {
-  border: transparent;
-}
-
-.btn > a {
+.signUpLink {
   text-decoration: none;
   color: white;
-}
-
-.btn:hover > a {
-  background-color: black;
-  border-color: black;
-  text-decoration: none;
-  color: white;
-}
-
-.btn2 {
-  background-color: #50e3c2;
-  border-color: #50e3c2;
-  padding: 20px 84px;
-  border-radius: 10px;
-  margin-top: 0.50em;
-  font-size: 20px;
-  text-shadow: 1px 1px rgba(215, 215, 215, 0.8);
-  width: 60%;
-}
-
-.btn2:hover {
-  background-color: black;
-  border-color: black;
-  text-decoration: none;
-  color: white;
-}
-
-.head {
-  margin-top: 4px;
-}
-
-.btn3 {
-  background-color: #50e3c2;
-  border-color: #50e3c2;
-  padding: 20px 84px;
-  border-radius: 10px;
-  font-size: 20px;
-  text-shadow: 1px 1px rgba(215, 215, 215, 0.8);
-  margin-top: 2.5px;
-  margin-bottom: 3.5px;
-  margin-left: 4px;
-}
-
-.btn3:hover {
-  background-color: black;
-  border-color: black;
-  text-decoration: none;
 }
 
 .navBanner {
-  box-shadow: 2px 3px 15px #9f9f9f;
-  z-index: 1;
-  background: linear-gradient(10deg, black, gray 50%, silver);
+  background-color: #A7A9AC;
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(0.34, rgba(230, 237, 241, 0.05)), color-stop(0.67, rgba(230, 237, 241, 0)));
 }
 
-.nav_links a {
-  position: relative;
-  display: inline-block;
-  margin: 20px 50px;
-  color: #50e3c2;
-  text-shadow: 1.5px 1.5px #7e7b7b;
-  text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: 18px;
-  padding-left: 0;
-}
-
-.nav_links a::before {
-  position: absolute;
-  top: 80%;
-  left: 50%;
-  color: transparent;
-  content: '•';
-  text-shadow: 0 0 transparent;
-  font-size: 10px;
-  transition: text-shadow 0.3s, color 0.3s;
-  transform: translateX(-50%);
-}
-
-.nav_links a:focus::before,
-.nav_links a:hover::before {
-  color: white;
-  text-shadow: 10px 0 white, -10px 0 white;
-}
-
-,
-.nav_links a:focus,
-.nav_links a:hover {
-  color: black;
-  text-decoration: none;
+.navBanner .shimmer {
+  background-image: -webkit-gradient(radial, 50% -50, 300, 50% 0, 0, from(rgba(230, 237, 241, 0)), to(rgba(230, 237, 241, 0.8)));
+  padding-top: 10px;
+  padding-bottom: 15px;
 }
 
 .timelineBody {
@@ -161,44 +55,26 @@ button {
   background-position: center;
 }
 
-.timelineBanner {
-  background-image: url("../images/space2.jpg");
-  background-size: cover;
-  background-position: center;
-  z-index: 0;
-  height: 150px;
+.topPage {
+  margin-top: 30px;
 }
 
-.timelineBottomBanner {
-  background-color: white;
+.signInimg {
+  width: 150px;
+  margin-top: 30px;
   box-shadow: 2px 3px 15px #9f9f9f;
-  height: 84px;
 }
 
-.chirpSignInimg {
-  width: 375px;
+.signPage {
+  margin-bottom: 50px;
 }
 
-.textShadow {
-  text-shadow: 1.5px 1.5px #7e7b7b;
+.scrolling {
+  height: 100px;
 }
 
 .profileText {
   color: white;
-}
-
-.followerNumbers {
-  padding: 5px 0;
-  margin-bottom: 0;
-}
-
-.followerNumbers li {
-  list-style: none;
-  display: inline-block;
-  margin-right: 20px;
-  font-size: 18px;
-  color: #50e3c2;
-  text-shadow: 1.5px 1.5px #7e7b7b;
 }
 
 .columnLeft {
@@ -207,8 +83,9 @@ button {
 }
 
 .columnLeft .thumbnail {
+  background-color: #A7A9AC;
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(0.34, rgba(230, 237, 241, 0.05)), color-stop(0.67, rgba(230, 237, 241, 0)));
   box-shadow: 2px 3px 15px #9f9f9f;
-  background: linear-gradient(10deg, black, gray 50%, silver);
   border: none;
 }
 
@@ -224,8 +101,21 @@ button {
 .columnRight .thumbnail {
   box-shadow: 2px 3px 15px #9f9f9f;
   display: flex;
-  background: linear-gradient(10deg, black, gray 50%, silver);
+  background-color: #A7A9AC;
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(0.34, rgba(230, 237, 241, 0.05)), color-stop(0.67, rgba(230, 237, 241, 0)));
   border: none;
+}
+
+.columnRight .thumbnail h3 {
+  font-size: 30px;
+}
+
+.columnRight .thumbnail h5 {
+  font-size: 12px;
+}
+
+.columnRight .thumbnail p {
+  font-size: 20px;
 }
 
 .leftContainer {
@@ -262,7 +152,7 @@ button {
   flex: 1;
 }
 
-.rightContainer .nameIconContainer .iconContainer .chirpIcon {
+.rightContainer .nameIconContainer .iconContainer .icon {
   width: 20px;
   float: right;
 }
@@ -274,27 +164,68 @@ button {
 
 .profileImg {
   border-radius: 20px;
-  border: 5px solid #50e3c2;
+  border: 5px solid black;
   box-shadow: 2px 3px 15px #9f9f9f;
   width: 100%;
   height: 100%;
 }
 
+.modal-body {
+  height: 200px;
+}
+
 #messageArea {
   width: 100%;
-  height: 5.5vw;
+  height: 180px;
+  font-size: 20px;
 }
 
 .modal-footer {
   text-align: center;
-  margin-bottom: 0.5em;
+  margin-bottom: 5px;
+}
+
+.modal-footer button:hover {
+  background-color: black;
+  color: white;
+  transition: 0.3s;
 }
 
 .thumbnail {
   padding: 12px;
 }
 
-.thumbnail2 {
-  padding: 12px;
-  height: 100vw;
+.followerContainer {
+  display: flex;
+  flex-direction: column;
+  margin-right: 5px;
+}
+
+.followerContainer .followerImgContainer {
+  flex: 3;
+}
+
+.followerContainer .followerImgContainer img {
+  width: 100%;
+  height: 100%;
+}
+
+.followerContainer .followerNameContainer {
+  flex: 1;
+}
+
+.followerContainer .followerButtonContainer {
+  flex: 1;
+  margin: auto;
+}
+
+.followerContainer .followerButtonContainer button {
+  border: 2px solid black;
+  background-color: white;
+}
+
+.followerContainer .followerButtonContainer button:hover {
+  background-color: black;
+  color: white;
+  transition: 0.3s;
 }

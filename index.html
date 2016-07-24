@@ -1,50 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Chirp Sign In</title>
+    <title>Sign In</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="Sign In">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous" />
+    <link rel="stylesheet" href="js/plug-ins/Planet/planetarium.css">
+    <link href="https://fonts.googleapis.com/css?family=Cabin:400,700|PT+Sans+Narrow:400,700|Roboto:400,500,700" rel="stylesheet">
     <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/button.css" />
 
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
   </head>
   <body class="signInBackground">
   <div class="container">
-    <class class="row">
-      <div class="col-sm-12">
+    <div class="row">
+      <div class="col-sm-12 topPage">
+        <div class="saturn planet" id="saturn">
+        </div>
         <div class="head1">
-          <h1 class="text-center">Welcome to Chirp!</h1>
-          <h5 class="text-center">Please sign in or sign up below</h5>
+          <h1 class="text-center">Welcome to Galaxy Connect</h1>
+          <h4 class="text-center">Making Contact Has Never Been Easier</h3>
+          <h5 class="text-center">Please sign in/sign up below</h5>
         </div>
-        <br />
-        <div class="chirpImg">
-          <img class='chirpSignInimg center-block' src="./images/chirp.png" alt="">
-        </div>
-        <br />
+      </div>
+      <div class="col-sm-6 col-sm-offset-3">
         <form method="post" action="/save" enctype="multipart/form-data">
 
           <div class="form-group">
             <label for="email" class="emailSignin">Email</label>
             <input type="email" class="form-control" id="emailSignIn" name="email" required />
           </div>
-          <br />
           <div class="form-group">
             <label for="password" class="passwordSignin">Password</label>
             <input type="password" class="form-control" id="passwordSignIn" name="password" required />
           </div>
         </form>
-          <div class="col-sm-12 text-center">
-            <button type="button" id="btnSignIn" class="btn btn-success">Sign In</button>
-            <a href="/signup.html"><button type="button" class="btn btn-success">Sign Up</button></a>
-          </div>
+        <br />
+        <div class="col-sm-12 text-center signPage">
+          <a class="button signUpLink" id="btnSignIn">
+            <span>Sign In</span>
+          </a>
+          <a class="button signUpLink" href="/signup.html">
+            <span>Sign Up</span>
+          </a>
+        </div>
       </div>
-    </class>
+      <div class="col-sm-2">
+        <div class="earth planet" id="earth">
+        </div>
+      </div>
+    </div>
   </div>
 
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+  <script src="js/plug-ins/Planet/jquery.planetarium.js"></script>
   <script src="js/config.js"></script>
   <script src="js/signin.js"></script>
   </body>
