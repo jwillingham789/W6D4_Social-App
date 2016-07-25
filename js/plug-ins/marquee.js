@@ -21,26 +21,26 @@
   **********************************************************************************************
 
 // Usage //
-  
+
     Only need to call the createMarquee() function,
     if desired, pass through the following paramaters:
 
     $1 duration:                   controls the speed at which the marquee moves
 
-    $2 padding:                    right margin between consecutive marquees. 
+    $2 padding:                    right margin between consecutive marquees.
 
-    $3 marquee_class:             the actual div or span that will be used to create the marquee - 
-                                   multiple marquee items may be created using this item's content. 
+    $3 marquee_class:             the actual div or span that will be used to create the marquee -
+                                   multiple marquee items may be created using this item's content.
                                    This item will be removed from the dom
 
-    $4 container_class:           the container div in which the marquee content will animate. 
+    $4 container_class:           the container div in which the marquee content will animate.
 
-    $5 marquee-content-sibling :   (optional argument) a sibling item to the marqueed item  that 
-                                   affects the end point position and available space inside the 
-                                   container. 
+    $5 marquee-content-sibling :   (optional argument) a sibling item to the marqueed item  that
+                                   affects the end point position and available space inside the
+                                   container.
 
-    $6 hover:                     Boolean to indicate whether pause on hover should is required. 
-  
+    $6 hover:                     Boolean to indicate whether pause on hover should is required.
+
     Eg:
         createMarquee({
           duration: 20000,
@@ -67,7 +67,7 @@
   }
 
 
-  
+
   function marqueeObj (newElement) {
     this.el = newElement;
     this.counter = 0;
@@ -94,13 +94,13 @@
 
 
   var defaults = {
-        duration: 20000,
+        duration: 50000,
         padding: 10,
         marquee_class: '.marquee',
         container_class: '.container',
 
         sibling_class: 0,
-        hover: true
+        hover: false
       };
 
       var config = $.extend({}, defaults, settings);
@@ -133,7 +133,7 @@
       var containerWidth = $(config.container_class).width();
       var contentWidth = $(config.marquee_class).width();
 
-      if (config.sibling_class == 0) { 
+      if (config.sibling_class == 0) {
         var widthToIgnore = 0;
       } else {
         var widthToIgnore = $(config.sibling_class).width();
@@ -158,14 +158,14 @@
       var totalDistance =  containerWidth - endPoint;
 
 
-      //initialise positions counters, content 
+      //initialise positions counters, content
 
       for (i = 0; i < spawnAmount; i++) {
 
           if(config.hover == true){
 
-            
-            var newElement = $('<div class="marquee-' + (i+1) + '">' + marqueeContent + '</div>')        
+
+            var newElement = $('<div class="marquee-' + (i+1) + '">' + marqueeContent + '</div>')
             .mouseenter(function() {
 
 
@@ -173,10 +173,10 @@
                 marqueeHovered = true;
 
                 for (var key in marqueeSpawned){
-                  marqueeSpawned[key].el.clearQueue().stop(); 
+                  marqueeSpawned[key].el.clearQueue().stop();
                   marqueeSpawned[key].hovered = true;
                 }
-                
+
 
               }
 
@@ -187,16 +187,16 @@
                 if ((focused == true) && (marqueeHovered == true)){
 
                   for (var key in marqueeSpawned){
-                    marqueeManager(marqueeSpawned[key]);   
-                  } 
+                    marqueeManager(marqueeSpawned[key]);
+                  }
 
                   marqueeHovered = false;
-                } 
+                }
             });
 
           } else {
 
-            var newElement = $('<div class="marquee-' + (i+1) + '">' + marqueeContent + '</div>') ;   
+            var newElement = $('<div class="marquee-' + (i+1) + '">' + marqueeContent + '</div>') ;
 
           }
 
@@ -205,14 +205,14 @@
           $(config.container_class).append(newElement);
 
           marqueeSpawned[i].currentPos = (widthToIgnore + (contentWidth*i))+(config.padding*i);  //initial positioning
-          marqueeSpawned[i].name = '.marquee-'+(i+1); 
+          marqueeSpawned[i].name = '.marquee-'+(i+1);
 
-          marqueeSpawned[i].totalDistance = totalDistance;  
-          marqueeSpawned[i].containerWidth = containerWidth;  
-          marqueeSpawned[i].contentWidth = contentWidth;  
-          marqueeSpawned[i].endPoint = endPoint;  
-          marqueeSpawned[i].duration = config.duration;  
-          marqueeSpawned[i].padding = config.padding;  
+          marqueeSpawned[i].totalDistance = totalDistance;
+          marqueeSpawned[i].containerWidth = containerWidth;
+          marqueeSpawned[i].contentWidth = contentWidth;
+          marqueeSpawned[i].endPoint = endPoint;
+          marqueeSpawned[i].duration = config.duration;
+          marqueeSpawned[i].padding = config.padding;
 
           marqueeSpawned[i].el.css('left', marqueeSpawned[i].currentPos+config.padding +'px'); //setting left according to postition
 
@@ -224,18 +224,18 @@
   }
 
   function marqueeManager(marqueed_el) {
-        
-        if (marqueed_el.hovered == false) { 
+
+        if (marqueed_el.hovered == false) {
 
             if (marqueed_el.counter > 0) {  //this is not the first loop
-              
+
                   marqueed_el.timeLeft = marqueed_el.duration;
-                  marqueed_el.el.css('left', marqueed_el.containerWidth +'px'); //setting margin 
-                  marqueed_el.currentPos = marqueed_el.containerWidth; 
+                  marqueed_el.el.css('left', marqueed_el.containerWidth +'px'); //setting margin
+                  marqueed_el.currentPos = marqueed_el.containerWidth;
                   marqueed_el.distanceLeft = marqueed_el.totalDistance - (marqueed_el.containerWidth - marqueed_el.getPosition());
 
             } else {    // this is the first loop
-              
+
               marqueed_el.timeLeft = (((marqueed_el.totalDistance - (marqueed_el.containerWidth - marqueed_el.getPosition()))/ marqueed_el.totalDistance)) * marqueed_el.duration;
             }
 
@@ -258,17 +258,15 @@
   window.onfocus = function(){
     focused = true;
       for (var key in marqueeSpawned){
-          marqueeManager(marqueeSpawned[key]);   
-      } 
+          marqueeManager(marqueeSpawned[key]);
+      }
     };
 
 
   window.onblur = function(){
     focused = false;
     for (var key in marqueeSpawned){
-        marqueeSpawned[key].el.clearQueue().stop(); 
+        marqueeSpawned[key].el.clearQueue().stop();
         marqueeSpawned[key].hovered = true;
     }
   };
-
-

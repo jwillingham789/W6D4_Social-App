@@ -1,8 +1,11 @@
 module.exports = {
-  entry: './main.js',
+  entry: {
+    timeline: './timeline.js',
+    followers: './followers.js',
+  },
   output: {
     path: './',
-    filename: 'main.bundle.js',
+    filename: '[name].bundle.js',
   },
   devServer: {
     inline: true,

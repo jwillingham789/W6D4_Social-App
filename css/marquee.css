@@ -22,7 +22,7 @@ h1 {
 	background: transparent;
 	float: left;
 	display: inline-block;
-	overflow: hidden;
+	/*overflow: hidden;*/
 	box-sizing: border-box;
 	height: 100%;
 	position: relative;
@@ -64,8 +64,8 @@ h1 {
 
 .marquee-content-items li{
   display: inline-block;
-  margin-right: 50px;
-  margin-top: 10px;
+  margin-right: 400px;
+  margin-top: 5px;
   color: #fff;
   text-shadow: 1.5px 1.5px #7e7b7b;
 }
