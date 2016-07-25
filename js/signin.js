@@ -5,13 +5,14 @@ document.getElementById('btnSignIn').addEventListener('click', function () {
   }
 
   fetchApi('POST', '/login', formFields, function (response, statusCode) {
+    console.log(response)
     if (statusCode === 201 || statusCode === 200) {
-      saveToken(response.token)
+      saveToken(response.api_token)
       redirect('/timeline.html')
     }
     else {
-      redirect('/index.html')
       alert(response.error)
+      redirect('/index.html')
     }
   })
 })
