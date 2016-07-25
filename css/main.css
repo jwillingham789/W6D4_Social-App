@@ -73,6 +73,16 @@
   height: 120px;
 }
 
+.planets {
+  margin-top: 20px;
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.planets .planet {
+  flex: 1;
+}
+
 .profileText {
   color: white;
 }

@@ -4,7 +4,6 @@ document.getElementById('signout').addEventListener('click', function (){
   redirect('/index.html')
 })
 
-
 // fetchApi('GET','/timeline', {}, function (response, statusCode) {
 //   //updating profile info
 //   document.getElementById('profileAvatar').setAttribute('src', response.avatar)
@@ -60,95 +59,78 @@ document.getElementById('signout').addEventListener('click', function (){
 //   })
 // })
 
-// $(document).ready(function(){
-//   createMarquee()
-//   $("#saturn").planetarium({
-//      autospin: "3000ms",
-//      angle: "30deg",
-//      glow: "rgba(255, 255, 255, 0.34902) 0px 0px 50px, inset 33px 20px 50px rgba(0,0,0,0.5)",
-//      pattern: "js/plug-ins/Planet/img/texture-saturn.jpg",
-//      size: "60x60",
-//      float: true,
-//      space: "body",
-//      ring: true,
-//      ringColor: "#d6f691",
-//      ringAngle: "20deg"
-//    })
-//   $("#earth").planetarium({
-//      autospin: "5000ms",
-//      angle: "-20deg",
-//      glow: "rgba(255, 255, 255, 0.34902) 0px 0px 50px, inset 33px 20px 50px rgba(0,0,0,0.5)",
-//      pattern: "js/plug-ins/Planet/img/texture-earth.jpg",
-//      size: "50x50",
-//      float: true,
-//      space: "body",
-//      ring: false,
-//      ringColor: "#fff",
-//      ringAngle: "20deg"
-//    })
-//    $("#jupiter").planetarium({
-//       autospin: "7000ms",
-//       angle: "10deg",
-//       glow: "rgba(255, 255, 255, 0.34902) 0px 0px 50px, inset 33px 20px 50px rgba(0,0,0,0.5)",
-//       pattern: "js/plug-ins/Planet/img/texture-jupiter.jpg",
-//       size: "70x70",
-//       float: true,
-//       space: "body",
-//       ring: false,
-//       ringColor: "#fff",
-//       ringAngle: "20deg"
-//     })
-//     $("#uranus").planetarium({
-//        autospin: "2000ms",
-//        angle: "90deg",
-//        glow: "rgba(255, 255, 255, 0.34902) 0px 0px 50px, inset 33px 20px 50px rgba(0,0,0,0.5)",
-//        pattern: "js/plug-ins/Planet/img/texture-uranus.jpg",
-//        size: "60x60",
-//        float: true,
-//        space: "body",
-//        ring: true,
-//        ringColor: "#b501ff",
-//        ringAngle: "90deg"
-//      })
-//      $("#neptune").planetarium({
-//         autospin: "10000ms",
-//         angle: "30deg",
-//         glow: "rgba(255, 255, 255, 0.34902) 0px 0px 50px, inset 33px 20px 50px rgba(0,0,0,0.5)",
-//         pattern: "js/plug-ins/Planet/img/texture-neptune.jpg",
-//         size: "40x40",
-//         float: true,
-//         space: "body",
-//         ring: false,
-//         ringColor: "#de1b1b",
-//         ringAngle: "20deg"
-//       })
-//       $("#pluto").planetarium({
-//          autospin: "2000ms",
-//          angle: "70deg",
-//          glow: "rgba(255, 255, 255, 0.34902) 0px 0px 50px, inset 33px 20px 50px rgba(0,0,0,0.5)",
-//          pattern: "js/plug-ins/Planet/img/texture-pluto.jpg",
-//          size: "30x30",
-//          float: true,
-//          space: "body",
-//          ring: true,
-//          ringColor: "#09a362",
-//          ringAngle: "-40deg"
-//        })
-//  })
-
-
-//
-// //send via modal popup message
-// document.getElementById('messageSubmit').addEventListener('click', function (){
-//   var formFields = {
-//     body: document.getElementById('messageArea').value
-//   }
-//   fetchApi('POST','/post', formFields, function (response, statusCode) {
-//     if (statusCode >= 200 && statusCode < 300) {
-//       redirect('/timeline.html')
-//     }
-//     else {
-//       alert("something went wrong")
-//     }
-//   })
-// })
+$(document).ready(function(){
+  $("#saturn").planetarium({
+     autospin: "3000ms",
+     angle: "30deg",
+     glow: "rgba(255, 255, 255, 0.34902) 0px 0px 50px, inset 33px 20px 50px rgba(0,0,0,0.5)",
+     pattern: "js/plug-ins/Planet/img/texture-saturn.jpg",
+     size: "60x60",
+     float: true,
+     space: "body",
+     ring: false,
+     ringColor: "#d6f691",
+     ringAngle: "20deg"
+   })
+  $("#earth").planetarium({
+     autospin: "5000ms",
+     angle: "-20deg",
+     glow: "rgba(255, 255, 255, 0.34902) 0px 0px 50px, inset 33px 20px 50px rgba(0,0,0,0.5)",
+     pattern: "js/plug-ins/Planet/img/texture-earth.jpg",
+     size: "50x50",
+     float: true,
+     space: "body",
+     ring: false,
+     ringColor: "#fff",
+     ringAngle: "20deg"
+   })
+   $("#jupiter").planetarium({
+      autospin: "7000ms",
+      angle: "0deg",
+      glow: "rgba(255, 255, 255, 0.34902) 0px 0px 50px, inset 33px 20px 50px rgba(0,0,0,0.5)",
+      pattern: "js/plug-ins/Planet/img/texture-jupiter.jpg",
+      size: "70x70",
+      float: true,
+      space: "body",
+      ring: true,
+      ringColor: "#95845c",
+      ringAngle: "20deg"
+    })
+    $("#uranus").planetarium({
+       autospin: "2000ms",
+       angle: "-40deg",
+       glow: "rgba(255, 255, 255, 0.34902) 0px 0px 50px, inset 33px 20px 50px rgba(0,0,0,0.5)",
+       pattern: "js/plug-ins/Planet/img/texture-uranus.jpg",
+       size: "60x60",
+       float: true,
+       space: "body",
+       ring: false,
+       ringColor: "#b501ff",
+       ringAngle: "80deg"
+     })
+     $("#neptune").planetarium({
+        autospin: "10000ms",
+        angle: "-30deg",
+        glow: "rgba(255, 255, 255, 0.34902) 0px 0px 50px, inset 33px 20px 50px rgba(0,0,0,0.5)",
+        pattern: "js/plug-ins/Planet/img/texture-neptune.jpg",
+        size: "40x40",
+        float: true,
+        space: "body",
+        ring: false,
+        ringColor: "#de1b1b",
+        ringAngle: "20deg"
+      })
+      $("#pluto").planetarium({
+         autospin: "2000ms",
+         angle: "70deg",
+         glow: "rgba(255, 255, 255, 0.34902) 0px 0px 50px, inset 33px 20px 50px rgba(0,0,0,0.5)",
+         pattern: "js/plug-ins/Planet/img/texture-pluto.jpg",
+         size: "50x50",
+         float: true,
+         space: "body",
+         ring: false,
+         ringColor: "#09a362",
+         ringAngle: "-40deg"
+       })
+       $(".planet:has(div) > div").addClass("center-block")
+ })

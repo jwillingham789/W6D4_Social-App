@@ -78,6 +78,14 @@ $metallicShimmer: -webkit-gradient(radial, 50% -50, 300, 50% 0, 0, from(rgba(230
 .scrolling {
   height: 120px;
 }
+.planets {
+  margin-top: 20px;
+  display: flex;
+  margin-bottom: 10px;
+  .planet {
+    flex: 1;
+  }
+}
 .profileText {
     color: white;
 }

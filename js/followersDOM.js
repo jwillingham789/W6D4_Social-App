@@ -60,7 +60,6 @@
 //
 // })
 
-
 //signout
 document.getElementById('signout').addEventListener('click', function (){
   sessionStorage.removeItem('api_token')

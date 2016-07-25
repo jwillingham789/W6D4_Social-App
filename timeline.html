@@ -8,8 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <!-- <link rel="stylesheet" href="./css/marquee.css" />
-    <link rel="stylesheet" href="js/plug-ins/Planet/planetarium.css"> -->
+    <link rel="stylesheet" href="js/plug-ins/Planet/planetarium.css">
     <link href="https://fonts.googleapis.com/css?family=Cabin:400,700|PT+Sans+Narrow:400,700|Roboto:400,500,700" rel="stylesheet">
     <link rel="stylesheet" href="./css/main.css" />
     <link rel="stylesheet" href="./css/button.css" />
@@ -33,70 +32,39 @@
             </div>
           </div>
           <!-- optional planetarium -->
-          <!-- <div class="col-sm-12 scrolling">
-            <div class="container">
-              <div class="marquee">
-                <ul class="marquee-content-items">
-                  <li class="jupiter planet" id="jupiter"></li>
-                  <li class="pluto planet" id="pluto"></li>
-                  <li class="uranus planet" id="uranus"></li>
-                  <li class="earth planet" id="earth"></li>
-                  <li class="saturn planet" id="saturn"></li>
-                  <li class="neptune planet" id="neptune"></li>
-                </ul>
+          <div class="col-sm-12 scrolling">
+              <div class="planets">
+                <div class="pluto planet" id="pluto"></div>
+                <div class="uranus planet" id="uranus"></div>
+                <div class="jupiter planet" id="jupiter"></div>
+                <div class="earth planet" id="earth"></div>
+                <div class="saturn planet" id="saturn"></div>
+                <div class="neptune planet" id="neptune"></div>
               </div>
-            </div>
-          </div> -->
-          <!-- Optional Modal Message Button -->
-          <!-- <div class="col-sm-12 text-center">
-            <a class="button" data-toggle="modal" data-target="#myModal">
-              <span>Transmit Message</span>
-            </a>
-          </div> -->
+          </div>
         </div>
         <div class="row">
             <div class="columnLeft col-sm-3">
-              <div class="thumbnail">
-                <div class="profileImgBox">
-                  <!-- <img class='profileImg center-block' id="profileAvatar" alt="">
-                  <h4 class="text-center profileText">Welcome back <span id="profileUsername"></span></h2> -->
-                  <div id="profile">
-                        <!-- Profile RENDER HERE -->
-                  </div>
+                <div class="thumbnail">
+                    <div class="profileImgBox">
+                        <div id="profile">
+                              <!-- Profile RENDER HERE -->
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
             <div class="columnRight col-sm-8" id="post">
                   <!-- POSTS RENDER HERE -->
             </div>
 
               <!-- Optional modal popup -->
-                <!-- <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                <h3 class="modal-title">What Do You Want To Transmit!</h3>
-                            </div>
-                            <div class="modal-body">
-                                <textarea id="messageArea" name="message"></textarea>
-                            </div>
-                            <div class="modal-footer text-center">
-                                <button type="button" id="messageSubmit" data-toggle="modal" data-target="#myModal" class="btn modalButton">Submit</button>
-                                <button type="button" class="btn modalButton" data-dismiss="modal">Close</button>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
-            </div>
+
         </div>
     </div>
 
-
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-    <!-- <script src="js/plug-ins/marquee.js"></script>
-    <script src="js/plug-ins/Planet/jquery.planetarium.js"></script> -->
+    <script src="js/plug-ins/Planet/jquery.planetarium.js"></script>
     <script src="js/config.js"></script>
     <script src="timeline.bundle.js"></script>
     <script src="js/timelineDOM.js"></script>
