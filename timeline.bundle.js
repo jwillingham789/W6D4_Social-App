@@ -54,11 +54,11 @@
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _Timeline = __webpack_require__(172);
+	var _Timeline = __webpack_require__(173);
 
 	var _Timeline2 = _interopRequireDefault(_Timeline);
 
-	var _Profile = __webpack_require__(173);
+	var _Profile = __webpack_require__(174);
 
 	var _Profile2 = _interopRequireDefault(_Profile);
 
@@ -21104,7 +21104,8 @@
 	module.exports = ReactMount.renderSubtreeIntoContainer;
 
 /***/ },
-/* 172 */
+/* 172 */,
+/* 173 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21190,7 +21191,7 @@
 	      var posts = this.state.posts.map(function (post, key) {
 	        return _react2.default.createElement(
 	          'div',
-	          { className: 'Thumnail', key: key },
+	          { className: 'thumbnail', key: key },
 	          _react2.default.createElement(
 	            'div',
 	            { className: 'leftContainer' },
@@ -21218,7 +21219,7 @@
 	              _react2.default.createElement(
 	                'h5',
 	                null,
-	                post.created_at
+	                post.props
 	              ),
 	              _react2.default.createElement(
 	                'p',
@@ -21232,7 +21233,8 @@
 	      return _react2.default.createElement(
 	        'div',
 	        null,
-	        _react2.default.createElement('input', { type: 'text', placeholder: 'post', className: 'form-control', onKeyPress: this.post, value: this.state.value, onChange: this.postsChange }),
+	        _react2.default.createElement('input', { type: 'text', placeholder: 'what do you wish to transmit?', className: 'form-control', onKeyPress: this.post, value: this.state.value, onChange: this.postsChange }),
+	        _react2.default.createElement('br', null),
 	        posts
 	      );
 	    }
@@ -21244,7 +21246,7 @@
 	exports.default = Timeline;
 
 /***/ },
-/* 173 */
+/* 174 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -21263,10 +21265,10 @@
 	  return _react2.default.createElement(
 	    "div",
 	    null,
-	    _react2.default.createElement("img", { src: props.avatar }),
+	    _react2.default.createElement("img", { className: "profileImg center-block", src: props.avatar }),
 	    _react2.default.createElement(
-	      "h6",
-	      null,
+	      "h4",
+	      { className: "text-center profileText" },
 	      "@",
 	      props.username
 	    ),
@@ -21275,21 +21277,21 @@
 	      { className: "row" },
 	      _react2.default.createElement(
 	        "div",
-	        { className: "col-sm-6" },
-	        props.followers_count,
-	        " Followers"
+	        { className: "col-sm-6 profileText text-center" },
+	        "Followers: ",
+	        props.followers_count
 	      ),
 	      _react2.default.createElement(
 	        "div",
-	        { className: "col-sm-6" },
-	        props.followees_count,
-	        " Following"
+	        { className: "col-sm-6 profileText text-center" },
+	        "Following: ",
+	        props.followees_count
 	      )
 	    ),
 	    _react2.default.createElement(
 	      "a",
 	      { href: "followers.html", className: "btn btn-default btn-block btn-sm" },
-	      "Follow Some Peeps"
+	      "Follow Lifeforms"
 	    )
 	  );
 	};

@@ -21140,17 +21140,21 @@
 	    key: 'followToggle',
 	    value: function followToggle(e) {
 	      var users = this.state.users;
-	      var followingUser = !users[e.target.getAttribute('data-user-key')].currently_being_followed;
+	      var followingUser = !users[e.target.getAttribute('data-user-key')].is_following;
 
 	      //Toggle State
-	      users[e.target.getAttribute('data-user-key')].currently_being_followed = followingUser;
+	      users[e.target.getAttribute('data-user-key')].is_following = followingUser;
 	      this.setState({ users: users });
 
 	      //Update API
 	      if (followingUser) {
-	        fetchApi('POST', '/follow', +users[e.target.getAttribute('data-user-key')].id, {});
+	        fetchApi('POST', '/follow', {
+	          id: users[e.target.getAttribute('data-user-key')].id
+	        });
 	      } else {
-	        fetchApi('DELETE', '/follow', +users[e.target.getAttribute('data-user-key')].id, {});
+	        fetchApi('POST', '/unfollow', {
+	          id: users[e.target.getAttribute('data-user-key')].id
+	        });
 	      }
 	    }
 	  }, {
@@ -21182,7 +21186,7 @@
 	            _react2.default.createElement(
 	              'button',
 	              { className: 'btn', onClick: _this2.followToggle, 'data-user-key': key },
-	              user.currently_being_followed ? 'Following' : 'Follow'
+	              user.is_following ? 'Following' : 'Follow'
 	            )
 	          )
 	        );
